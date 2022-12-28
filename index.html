@@ -8,7 +8,55 @@
     <script src="butacas.js"></script>
     <script>
         function renderButacas() {
-            butacas = new Butacas(3,15,[3,7,8]);
+            let arrayButacas = [
+                {"id":1, "libre":true},
+                {"id":2, "libre":true},
+                {"id":3, "libre":false},
+                {"id":4, "libre":false},
+                {"id":5, "libre":true},
+                {"id":6, "libre":false},
+                {"id":7, "libre":true},
+                {"id":8, "libre":true},
+                {"id":9, "libre":false},
+                {"id":10, "libre":true},
+                {"id":11, "libre":true},
+                {"id":12, "libre":false},
+                {"id":13, "libre":true},
+                {"id":14, "libre":true},
+                {"id":15, "libre":false},
+                {"id":16, "libre":true},
+                {"id":17, "libre":true},
+                {"id":18, "libre":true},
+                {"id":19, "libre":true},
+                {"id":20, "libre":false},
+                {"id":21, "libre":false},
+                {"id":22, "libre":false},
+                {"id":23, "libre":false},
+                {"id":24, "libre":false},
+                {"id":25, "libre":false},
+                {"id":26, "libre":false},
+                {"id":27, "libre":false},
+                {"id":28, "libre":true},
+                {"id":29, "libre":true},
+                {"id":30, "libre":true},
+                {"id":31, "libre":true},
+                {"id":32, "libre":false},
+                {"id":33, "libre":true},
+                {"id":34, "libre":true},
+                {"id":35, "libre":false},
+                {"id":36, "libre":true},
+                {"id":37, "libre":true},
+                {"id":38, "libre":false},
+                {"id":39, "libre":false},
+                {"id":30, "libre":false},
+                {"id":31, "libre":false},
+                {"id":32, "libre":false},
+                {"id":33, "libre":false},
+                {"id":34, "libre":false},
+                {"id":35, "libre":false},
+            ];
+
+            butacas = new Butacas('sala1',arrayButacas);
             butacas.render();
         }
     </script>
@@ -42,7 +90,7 @@
 
         <div class="pantalla">PANTALLA</div>
         <form action="">
-            <div class="butacas" id="id-butacas">
+            <div class="butacas" id="sala1">
                 <!-- <div class="butaca">
                     <input type="checkbox" id="checkbox2" />
                     <label for="checkbox2">1</label>
