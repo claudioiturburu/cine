@@ -18,7 +18,6 @@ class Butacas
         for (let i=1;i<=this.filas;i++) {
             for (let j=1;j<=this.columnas;j++) {
                 posicion = (i-1) * this.columnas + j;
-                console.log(posicion);
                 this.butacas[posicion] = true;
                 if (posicion==estaOcupada) {
                     this.butacas[posicion] = false;
@@ -37,17 +36,24 @@ class Butacas
     render() 
     {
         const butacasHtml = document.getElementById("id-butacas");
+        // let selfMe = this;
         this.butacas.forEach(function(valor, indice) {
             let nodo = document.createElement('div');
             nodo.className = "butaca";
+            // console.log(selfMe.filas);
             let input = document.createElement('input');
             input.type = "checkbox";
             input.id = indice;
             if (valor==false) {
                 input.disabled = true;
+                nodo.title = "butaca reservada";
+            }
+            else {
+                nodo.title = "click para seleccionar la butaca";
             }
             let label = document.createElement('label');
             label.setAttribute("for",indice);
+            label.innerHTML = indice;
             nodo.appendChild(input);
             nodo.appendChild(label);
             butacasHtml.appendChild(nodo);
