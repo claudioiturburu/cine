@@ -45,10 +45,12 @@
   
 .butaca input[type="checkbox"]:checked + label {
     background-color: green;
+    color: white;
 }
 
 .butaca input[type="checkbox"]:disabled + label {
     background-color: gray;
+    color: white;
 }
 
 .submit {
