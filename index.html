@@ -56,7 +56,7 @@
                 {"id":35, "libre":false},
             ];
 
-            butacas = new Butacas('sala1',arrayButacas);
+            butacas = new Butacas('sala1',arrayButacas,5);
             butacas.render();
         }
     </script>
@@ -64,29 +64,21 @@
 </head>
 <body onload="renderButacas()">
     <div class="referencia-butaca">
-        <p>
-            <div class="butaca referencia">
-                <input type="checkbox" id="id" />
-                <label for="id"></label>
-                <span>Libre</span>
-            </div>
-        </p>
-        <p>
-            <div class="butaca referencia">
-                <input type="checkbox" id="id" checked />
-                <label for="id"></label>
-                <span>Seleccionada para reservar</span>
-            </div>
-        </p>
-        <p>
-            <div class="butaca referencia">
-                <input type="checkbox" id="id" disabled />
-                <label for="id"></label>
-                <span>Ocupada</span>
-            </div>
-        </p>
+        <p>Referencias: </p>
+        <div class="butaca referencia">
+            <label class="libre"></label>
+            <span>Libre</span>
+        </div>
+        <div class="butaca referencia">
+            <label class="seleccionada"></label>
+            <span>Seleccionada para reservar</span>
+        </div>
+        <div class="butaca referencia">
+            <label class="ocupada"></label>
+            <span>Ocupada</span>
+        </div>
     </div>
-    <div class="contenedor">
+    <div class="contenedor" id="id-contenedor">
         <h1>CINE</h1>
 
         <div class="pantalla">PANTALLA</div>

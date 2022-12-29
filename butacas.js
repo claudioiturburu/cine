@@ -6,9 +6,10 @@ class Butacas
      * @param {string} idDiv, id donde se completaran las butacas 
      * @param {Array} butacas, json [{id:int,libre:bool}] 
      */
-    constructor(idDiv,butacas) {
+    constructor(idDiv,butacas,columnas=15) {
         this.butacas = butacas;
         this.idDiv = idDiv;
+        this.width = 900/15*columnas;
     }
 
     /**
@@ -20,7 +21,10 @@ class Butacas
      */
     render() 
     {
-        const butacasHtml = document.getElementById(this.idDiv);
+        let contenedor = document.getElementById("id-contenedor");
+        contenedor.setAttribute("style","width:"+this.width);
+        let butacasHtml = document.getElementById(this.idDiv);
+        butacasHtml.setAttribute("style","width:"+this.width);
         this.butacas.forEach(function(valor, indice) {
             let id = valor.id;
             let libre = valor.libre;
